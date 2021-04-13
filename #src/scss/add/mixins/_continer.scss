@@ -1,0 +1,8 @@
+//Контейнер
+@mixin container ($Width, $padding) {
+    display: block;
+    width: 100%;
+    max-width: $Width + ($padding * 2);
+    padding: 0 $padding;
+    margin: 0 auto;
+}

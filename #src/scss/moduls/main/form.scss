@@ -1,0 +1,84 @@
+.form {
+    margin-bottom: 5rem;
+}
+
+.form--auth {
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+.form__group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form__control {
+    display: block;
+    width: 100%;
+    padding: .5rem 0;
+
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #3F3F3F;
+
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: $white;
+
+    &::placeholder {
+        color: $subtwxt;
+    }
+
+    &--textarea {
+        resize: none;
+        height: 3rem;
+    }
+
+    &:focus+.form__line {
+        width: 100%;
+    }
+}
+
+.form__line {
+    width: 0;
+    height: 1px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background-color: $link;
+    transition: width .2s linear;
+
+}
+
+.btn--rounded {
+    border-radius: 0.41rem;
+    padding: .8rem 1.5rem;
+}
+
+.form__footer--center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.form__footer--list {
+    display: flex;
+    justify-content: center;
+
+    li {
+        font-size: 12px;
+        font-weight: 400;
+
+        a {
+            color: $white;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}

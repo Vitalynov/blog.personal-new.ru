@@ -1,0 +1,48 @@
+.related {
+    border-bottom: 1px solid #1c1c1c;
+    margin-bottom: 2rem;
+}
+
+.post__subtitle {
+
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    margin-bottom: 2rem;
+}
+
+.related__list {
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint($mobile-bp){
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.related__list-item {
+    flex: 0 1 50%;
+    margin-bottom: 2.4rem;
+}
+
+.related__list-title {
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #F3EBA2;
+    // text-overflow: ellipsis;
+    // overflow: hidden;
+    // white-space: nowrap;
+
+    &>a {
+        color: inherit;
+    }
+
+}
+
+.related__list-date {
+
+    font-size: 12px;
+    color: $subtwxt;
+
+}

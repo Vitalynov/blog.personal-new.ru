@@ -1,0 +1,41 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    position: relative;
+
+
+}
+
+
+.page__title {
+    margin-bottom: 3rem;
+
+    font-size: 21px;
+    color: $title;
+}
+
+.page__title--center {
+    text-align: center;
+}
+
+.page__mask {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000, .8);
+    z-index: -1;
+    transition: all 2s ease-in;
+
+    .showe-sidebar & {
+        visibility: visible;
+        opacity: 1;
+        z-index: 100;
+    }
+}

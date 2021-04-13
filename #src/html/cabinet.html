@@ -1,0 +1,61 @@
+---
+layout: default
+title: Cabinet
+---
+
+<h1 class="page__title">Профиль</h1>
+
+<form action="/" class="form" method="POST">
+	<div class="cabinet">
+		<div class="cabinet__form">
+			<div class="form__group form__group--mb">
+				<input
+					class="form__control"
+					type="text"
+					name="name"
+					placeholder="Ваше имя:"
+					value="Дмитрий Валак"
+				/>
+				<span class="form__line"></span>
+			</div>
+			<div class="form__group form__group--mb">
+				<input
+					class="form__control"
+					type="email"
+					name="email"
+					placeholder="Ваш e-mail:"
+					value="alex.provo@mail.com"
+				/>
+				<span class="form__line"></span>
+			</div>
+			<div class="form__group form__group--mb">
+				<input
+					class="form__control"
+					type="password"
+					name="password"
+					placeholder="Новый пароль"
+				/>
+				<span class="form__line"></span>
+			</div>
+			<div div class="form__group form__group--mb">
+				<input
+					class="form__control"
+					type="password"
+					name="repead_password"
+					placeholder="Подтвердите пароль"
+				/>
+				<span class="form__line"></span>
+			</div>
+		</div>
+		<div class="cabinet__avatar">
+			<div class="cabinet__avatar--img">
+				<img src="img/form/avatar01.jpg" alt="avatar01.jpg" />
+			</div>
+			<label class="cabinet__file" for="file-avatar">
+				выбрать аватар
+				<input type="file" id="file-avatar" />
+			</label>
+		</div>
+	</div>
+	<button class="btn btn--blue btn--rounded" type="submit">Сохранить</button>
+</form>

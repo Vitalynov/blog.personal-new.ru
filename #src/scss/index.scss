@@ -1,0 +1,113 @@
+//Подключение вендеров:
+@import './add/vender/normalize';
+
+//Подключение переменных:
+@import './add/vars/vars';
+
+//Подключение миксинов:
+@import './add/mixins/continer';
+@import './add/mixins/breakpoint';
+//Миксин преобразования шрифтов:
+@import './add/mixins/font-face';
+
+//Миксин адаптации шрифта
+@import './add/mixins/adaptiv-font';
+//Пример внесения миксина адаптивного шрифта и контейнера
+// .box p {
+//     @include adaptiv-font(30, 20);
+//     font-size: 30px;
+//     @include container ($maxWidth)
+//     color: $blue;
+// }
+
+
+
+/*-Подключение шрифтов-*/
+// Перенести шрифты из файла:#src/scss/moduls/mixins/_fonts.scss'
+//@include font-face("roboto", "roboto-v20-latin_cyrillic-500", 500);
+//font-family: 'roboto', sans-serif;
+//@include font-face("roboto", "roboto-v20-latin_cyrillic-regular", 400);
+//font-family: 'roboto', sans-serif;
+//@include font-face("roboto", "roboto-v20-latin_cyrillic-700", 700);
+//font-family: 'roboto', sans-serif;
+
+
+// Прямое подключение шрифтов::after
+/* roboto-regular - latin_cyrillic */
+
+
+//font-family: 'Roboto', sans-serif;
+//-------------------------------------------------------------------------------------------------
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #181818;
+	font-size: 1.4rem;
+	color: $title;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+
+	&.no-scroll,
+	.showe-sidebar {
+		overflow: hidden;
+		padding-right: 1.6rem;
+
+		@include breakpoint($tablet-bp) {
+			padding-right: .6rem;
+		}
+	}
+}
+
+
+$maxWidth: 60rem; //Максимальная ширина контента для мексина adaptiv-font.
+$padding: 5rem; //padding контента для мексина adaptiv-font.
+
+.container {
+	@include container($maxWidth, $padding);
+
+	@include breakpoint($mobile-bp) {
+		$padding: 1.5rem;
+		@include container($maxWidth, $padding);
+	}
+}
+
+a {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+@import "./moduls/page";
+@import "./moduls/btn";
+@import "moduls/modal";
+
+
+//Header
+@import "./moduls/header/header";
+@import "./moduls/header/nav";
+@import "moduls/header/subnav";
+@import "./moduls/header/burger";
+@import "./moduls/header/search";
+
+//Sidebar
+@import "./moduls/sidebar/sidebar";
+@import "./moduls/sidebar/profile";
+@import "./moduls/sidebar/social";
+
+//Main
+@import "./moduls/main/main";
+@import "./moduls/main/stories";
+@import "./moduls/main/add-post";
+@import "./moduls/main/post";
+@import "./moduls/main/embed";
+@import "./moduls/main/pagination";
+@import "./moduls/main/related";
+@import "./moduls/main/form";
+@import "./moduls/main/comments";
+@import "./moduls/main/work";
+@import "./moduls/main/cabinet";

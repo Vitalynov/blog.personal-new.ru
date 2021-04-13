@@ -1,0 +1,11 @@
+.main {
+    padding-left: $sitebar-width;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    transition: padding-left .3s ease-in;
+
+    @include breakpoint ($tablet-bp) {
+        padding: 7rem 0 3rem;
+        position: relative;
+    }
+}

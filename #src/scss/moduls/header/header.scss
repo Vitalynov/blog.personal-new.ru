@@ -1,0 +1,33 @@
+.header{
+    position: fixed;
+    width: calc(100% - #{$sitebar-width});
+    //height: 4rem;
+    top: 0;
+    right: 0;
+    background-color: $secondary;
+    box-shadow: 0px 5px 22px 0px rgba(#000, .25);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: width .3s ease-in;
+    @include breakpoint ($tablet-bp){
+        width: 100%;
+    }
+}
+.header__left {
+}
+
+.has-subnav {
+}
+
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+.search {
+}
+.search__input {
+}
